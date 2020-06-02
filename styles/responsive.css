@@ -1,0 +1,21 @@
+/* devices menores que 900px */
+@media(max-width: 900px){
+    #page-home{
+        background-position: 100vw 20vh;
+    } 
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home main {
+        align-items: center;
+    }
+
+    #page-home #login {
+        position: absolute;
+        bottom: 5vh;
+        transform: translateX(-15%);
+    }
+}
