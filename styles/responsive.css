@@ -1,4 +1,4 @@
-/* devices menores que 900px */
+/* portable devices*/
 @media(max-width: 900px){
     #page-home{
         background-position: 100vw 20vh;
@@ -17,5 +17,52 @@
         position: absolute;
         bottom: 5vh;
         transform: translateX(-15%);
+    }
+}
+
+ /* small laptops */
+@media (min-width: 1024px){
+    #page-home{
+        background-position-x: 25vw;
+    } 
+}
+
+/* large laptops */
+@media (min-width: 1440px){
+    #page-home{
+        background-position-x: 35vw;
+    } 
+}
+
+/* 4k  devices */
+@media (min-width: 1800px){
+    #page-home{
+        background-position-x: 50vw;
+    } 
+}
+
+@media (min-height: 1000px){
+    html{
+        font-size: x-large;
+    }
+
+    #page-home{
+        background-position-y: center;
+    } 
+
+    #page-home main {
+        width: 40vw;
+    }
+}
+
+
+/* devices with small height */
+@media (max-height: 700px){
+    #page-home{
+        background-position-y: 15vh;
+    } 
+
+    #page-home main {
+        width: 40vw;
     }
 }

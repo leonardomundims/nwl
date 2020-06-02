@@ -1,8 +1,7 @@
 /* Página Inicial */
 #page-home {
     background: url(../assets/icones/home-background.svg) no-repeat;
-    background-size: 120vh;
-    background-position: 40vw 20vh;
+    background-position: 35vw bottom;
 }
 
 #page-home .content {
@@ -79,7 +78,7 @@
     height: 50px;
     background-color: rgba(0, 0, 0, 0.08);
 
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
 
     display: flex;
     justify-content: center;
