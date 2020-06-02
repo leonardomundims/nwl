@@ -1,8 +1,9 @@
 /* general */
+
 :root {
     --title-color: #322153;
-    --background-color:  #f0f0f5;
-    --primary-color : #34CB79;
+    --background-color: #f0f0f5;
+    --primary-color: #34CB79;
 }
 
 html {
@@ -12,13 +13,20 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
+    outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
 }

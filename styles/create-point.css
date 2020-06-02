@@ -1,0 +1,127 @@
+/* header */
+
+#create-point {
+    background-color: var(--background-color);
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#create-point header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#create-point header a {
+    font-weight: bold;
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+}
+
+#create-point header span {
+    display: flex;
+    background-image: url(../assets/icones/arrow-left.svg);
+    width: 20px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+
+/* form */
+
+#create-point form {
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    margin: 80px auto;
+    padding: 64px;
+}
+
+#create-point form legend {
+    color: var(--title-color);
+    margin-bottom: 24px;
+}
+
+#create-point form fieldset {
+    border: 0;
+}
+
+#create-point form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#create-point form input,
+#create-point form select {
+    background-color: var(--background-color);
+    height: 40px;
+    border: 0;
+    font-size: 16px;
+    padding-left: 5px;
+    outline-color: var(--primary-color);
+}
+
+
+/* remover a seta no campo select */
+
+#create-point form select {
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do Edge*/
+}
+
+#create-point .field-group {
+    display: flex;
+}
+
+#create-point .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+
+/* a estilização será aplicada no elemento apó o "+" */
+
+#create-point .field+.field {
+    margin-left: 40px;
+}
+
+
+/* button */
+
+#create-point button {
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 40px;
+    border: 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 400ms;
+    outline: none;
+}
+
+#create-point button:hover {
+    background-color: #2fb86e;
+}
+
+
+/* font */
+
+#create-point button,
+#create-point input,
+#create-point select {
+    font-family: Roboto, sans-serif;
+}
