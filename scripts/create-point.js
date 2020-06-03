@@ -22,7 +22,7 @@ ufSelect.addEventListener("change", getCities) //quando escolher o estdo aciona 
 //função que gera as cidades - o atributo event vem da função eventlistener acima
 function getCities(event) {
     const citySelect = document.querySelector("[name = city]")
-    const cidadeInput = document.querySelector("[name = estado]")
+    const stateInput = document.querySelector("[name = state]")
     const ufId = event.target.value
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufId}/municipios?orderBy=nome`
 
@@ -36,7 +36,7 @@ function getCities(event) {
         citySelect.innerHTML = ""
         fetch(url).then(res => res.json()).then(cities => {
             for (const city of cities) {
-                citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+                citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
             }
         })
         citySelect.disabled = false
@@ -44,5 +44,5 @@ function getCities(event) {
 
     //coloca o texto do estado selecionado
     const indexOfState = event.target.selectedIndex
-    cidadeInput.value = event.target.options[indexOfState].text
+    stateInput.value = event.target.options[indexOfState].text
 }

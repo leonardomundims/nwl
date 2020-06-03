@@ -62,14 +62,14 @@
     height: 50px;
     border-radius: 25px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--title-color);
     display: flex;
     align-items: center;
     transition: all 400ms;
 }
 
 #page-home main a:hover {
-    background-color: #2fb86e;
+    background-color: var(--dark-green-color);
 }
 
 #page-home main a span {

@@ -1,4 +1,10 @@
-/* header */
+/* font */
+
+#create-point button,
+#create-point input,
+#create-point select {
+    font-family: Roboto, sans-serif;
+}
 
 #create-point {
     background-color: var(--background-color);
@@ -6,6 +12,9 @@
     max-width: 1100px;
     margin: 0 auto;
 }
+
+
+/* header */
 
 #create-point header {
     display: flex;
@@ -40,13 +49,33 @@
     padding: 64px;
 }
 
-#create-point form legend {
+#create-point h3 {
+    font-size: 36px;
     color: var(--title-color);
-    margin-bottom: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#create-point form legend {
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: Ubuntu, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--title-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#create-point form legend span.small {
+    font-size: 16px;
+    color: grey
 }
 
 #create-point form fieldset {
     border: 0;
+    margin-bottom: 40px;
 }
 
 #create-point form label {
@@ -109,7 +138,7 @@
     margin-top: 40px;
     border: 0;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--title-color);
     text-align: center;
     font-weight: bold;
     font-size: 16px;
@@ -119,14 +148,43 @@
 }
 
 #create-point button:hover {
-    background-color: #2fb86e;
+    background-color: var(--dark-green-color);
 }
 
 
-/* font */
+/* parte do select de intens */
 
-#create-point button,
-#create-point input,
-#create-point select {
-    font-family: Roboto, sans-serif;
+.itens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 10px;
+}
+
+.itens-grid li {
+    list-style: none;
+    height: 180px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    padding: 24px;
+    cursor: pointer;
+}
+
+.itens-grid li span {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* inten selecionado */
+
+.itens-grid li.selected {
+    border: 2px solid var(--dark-green-color);
+    background-color: #e1Faec;
 }

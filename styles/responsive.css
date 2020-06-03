@@ -10,23 +10,59 @@
     }
     #page-home main {
         align-items: center;
+        width: auto;
+        margin-bottom: 50px;
     }
-    #page-home #login {
+    #page-home header a {
         position: absolute;
         bottom: 5vh;
         transform: translateX(-15%);
+    }
+    /* pagina create-point */
+    #create-point header {
+        flex-direction: column;
+    }
+    #create-point header a {
+        margin-top: 10px;
+    }
+    #create-point form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+    }
+    #create-point form legend {
+        text-align: center;
+    }
+    #create-point form fieldset {
+        border: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #create-point .field-group {
+        flex-direction: column;
+    }
+    #create-point .field+.field {
+        margin-left: 0;
+    }
+    #create-point .field {
+        margin: 10px 0;
+    }
+    #create-point button {
+        margin: 10px auto;
     }
 }
 
 
 /* small laptops */
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     #page-home {
-        background-position: 37vw bottom;
+        background-position: 32vw bottom;
     }
     #page-home main {
-        width: 40vw;
+        width: 50vw;
     }
 }
 
@@ -46,9 +82,6 @@
     #page-home {
         background-position-x: 50vw;
     }
-}
-
-@media (min-height: 1000px) {
     html {
         font-size: x-large;
     }
@@ -66,8 +99,5 @@
 @media (max-height: 700px) {
     #page-home {
         background-position-y: 15vh;
-    }
-    #page-home main {
-        width: 40vw;
     }
 }
