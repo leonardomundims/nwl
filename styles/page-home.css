@@ -54,6 +54,7 @@
 
 #page-home p {
     margin: 20px 0;
+    color: var(--text-color);
 }
 
 #page-home main a {

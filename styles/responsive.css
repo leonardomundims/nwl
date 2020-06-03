@@ -1,6 +1,14 @@
 /* portable devices*/
 
 @media(max-width: 900px) {
+    /* pagina create-point  e serach result header*/
+    header {
+        flex-direction: column;
+    }
+    header a {
+        margin-top: 10px;
+    }
+    /* page home*/
     #page-home {
         background-position: 100vw 20vh;
     }
@@ -16,24 +24,25 @@
     #page-home header a {
         position: absolute;
         bottom: 5vh;
-        transform: translateX(-15%);
+    }
+    /* modal page */
+    #modal .content {
+        width: 90%;
+        margin: 0 auto;
     }
     /* pagina create-point */
-    #create-point header {
-        flex-direction: column;
-    }
-    #create-point header a {
-        margin-top: 10px;
+    #create-point {
+        margin: 0;
+        width: 100%;
     }
     #create-point form {
+        margin: 40px 0 0;
+        border-radius: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
         padding: 20px;
         justify-content: center;
-    }
-    #create-point form legend {
-        text-align: center;
     }
     #create-point form fieldset {
         border: 0;
@@ -51,6 +60,39 @@
     }
     #create-point button {
         margin: 10px auto;
+    }
+    #create-point .items legend {
+        display: flex;
+        flex-direction: column;
+        align-items: unset;
+    }
+    .itens-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 10px 0;
+    }
+    /* page search result */
+    #search-results .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* quando o celular está deitado -> landscape */
+
+@media (orientation: landscape) {
+    /* page create point */
+    /* page search-results */
+    #search-results .cards {
+        grid-template-columns: 1fr;
+    }
+    #search-results .card {
+        display: flex;
+    }
+    #search-results .card img {
+        width: 50%;
+        height: auto;
+        object-fit: fill;
+        border-radius: 8px 0 0 8px;
     }
 }
 
