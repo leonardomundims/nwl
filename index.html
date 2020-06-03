@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="assets/favicon.ico" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/page-home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 
     <link rel="stylesheet" href="/styles/responsive.css">
     <title>Ecoleta</title>
 </head>
+
 <body>
     <div id="page-home">
         <div class="content">
@@ -28,6 +28,24 @@
                 <a href="#"><span></span><strong>Pontos de Coleta</strong></a>
             </main>
         </div>
+    </div>
+
+    <!-- essa parte só aparece quando clica em pesquisar pontos de coleta -->
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de coleta</h1>
+                <a href="">Fechar</a>
+            </div>
+            <form action="">
+                <label for="search">Cidade</label>
+                <div class="field">
+                    <input type="text" name="search" placeholder="Pesquise por cidade">
+                    <button><img src="/assets/icones/search.svg" alt="Buscar"></button>
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 

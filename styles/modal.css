@@ -1,0 +1,78 @@
+#modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0E0A14f0;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+}
+
+#modal.hide {
+    display: none;
+}
+
+#modal .content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 440px;
+}
+
+#modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .header h1 {
+    font-size: 36px;
+}
+
+#modal .header a {
+    background-image: url(../assets/icones/x.svg);
+    width: 20px;
+    height: 20px;
+    font-size: 0.01px;
+}
+
+#modal form label {
+    display: block;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    font-size: 16px;
+}
+
+#modal form .field {
+    display: flex;
+}
+
+#modal .field input {
+    flex: 1;
+    background-color: var(--background-color);
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    border: 0;
+    font-size: 16px;
+    padding-left: 40px;
+    outline: none;
+}
+
+#modal .field button {
+    background-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#modal .field button:hover {
+    background-color: var(--dark-green-color);
+}
