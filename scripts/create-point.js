@@ -46,3 +46,44 @@ function getCities(event) {
     const indexOfState = event.target.selectedIndex
     stateInput.value = event.target.options[indexOfState].text
 }
+
+//itens de coleta
+const items = document.querySelector("[name = items]") //pegar o input hidenn nma=items
+let selectedItems = [] //array para armazenar os itens selecionados
+const intensToCollect = document.querySelectorAll(".itens-grid li") //pegar todas as li
+
+//adiciona um event listener em cada li
+for (const item of intensToCollect) {
+    item.addEventListener("click", handleSelectedItem)
+}
+
+//realiza varias atividade quando clicka no item
+function handleSelectedItem(event) {
+
+    //--------- adicionar ou remover classe de uma tag usando JS  --------------- 
+    const itemLi = event.target
+
+    itemLi.classList.toggle("selected") //toggle é tipo botão liga/desliga -> se tiver a classe remove, se não tiver adiciona
+
+    //--------- atividades referentes a manipulação do formulario para gerear dados para o back-end -------
+
+    const itemId = itemLi.dataset.id //pega o data-id do item selecionado
+
+    //verificar se já existem itens selecionados
+    const alreadySelected = selectedItems.findIndex(item => item == itemId)
+        // essa função retorna o index -1 caso não tenha nada dentro do array ou um valor a partir de zero caso exista
+
+    //caso tenha item clickado já esteja dentro do array precisa remover
+    if (alreadySelected != -1) {
+        const filteredItems = selectedItems.filter(item => item != itemId) //essa função filtra, ou seja, remove o item seleciona caso ele esteja dentro do array 
+            //após remover o item atualiza o array
+        selectedItems = filteredItems
+
+    } else {
+        //caso o item não esteja dentro do array precisa adicionar
+        selectedItems.push(itemId) //essa função faz um push, ou seja, empurra para dentro do array o id do item selecionado
+    }
+
+    //finalmente adiciona os ids dos itens selecionados ao "value" do input hiden
+    items.value = selectedItems
+}

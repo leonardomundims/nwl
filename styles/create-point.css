@@ -188,3 +188,11 @@
     border: 2px solid var(--dark-green-color);
     background-color: #e1Faec;
 }
+
+
+/*desabilitar eventos do itens */
+
+.itens-grid li img,
+.itens-grid li span {
+    pointer-events: none;
+}
