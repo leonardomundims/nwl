@@ -76,6 +76,10 @@
     /* Remove estilo padrão do Edge*/
 }
 
+#create-point form option {
+    outline-color: var(--primary-color);
+}
+
 #create-point .field-group {
     display: flex;
 }
@@ -111,6 +115,7 @@
     font-size: 16px;
     transition: all 400ms;
     outline: none;
+    cursor: pointer;
 }
 
 #create-point button:hover {
