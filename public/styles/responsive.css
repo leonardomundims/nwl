@@ -79,7 +79,7 @@
 
 /* quando o celular está deitado -> landscape */
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 900px) {
     /* page create point */
     /* page search-results */
     #search-results .cards {
