@@ -1,82 +1,84 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "_layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% set pageId = "search-results" %}
 
-    <link rel="shortcut icon" href="assets/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+{% block styles %}
     <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
 
-    <link rel="stylesheet" href="/styles/responsive.css">
+{% block title %}
     <title>Cadastrar ponto de coleta</title>
-</head>
 
-<body>
-    <div id="search-results">
-        <header>
-            <img src="assets/icones/logo.svg" alt="Logomarca">
+{% endblock title %}
 
-            <a href="/"><span></span>Voltar para Home</a>
-        </header>
+{% block content %}
+    {% include "partials/header.html" %}
 
-        <main>
-            <h4><strong>3 pontos</strong> encontrados</h4>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <h1>Colectivo</h1>
-                        </a>
-                        <div class="items">
-                            <img src="/assets/icones/papeis-papelao.svg" alt="">
-                        </div>
-                        <h3>Papel e Papelão</h3>
-                        <p>
-                            Piumhi, Minas Gerais <br> Rua Aquela, Bairro Você Sabe <br> N° 123, Perto de nada
-                        </p>
+    <main>
+        <h4>
+            <strong>3 pontos</strong>
+            encontrados</h4>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+                <div class="content">
+                    <a href="#">
+                        <h1>Colectivo</h1>
+                    </a>
+                    <div class="items">
+                        <img src="/assets/icones/papeis-papelao.svg" alt="">
                     </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <h1>Repower</h1>
-                        </a>
-                        <div class="items">
-                            <img src="/assets/icones/baterias.svg" alt="">
-                            <img src="/assets/icones/eletronicos.svg" alt="">
-                        </div>
-                        <h3>Pilhas e Baterias, Residuos Eletrônicos</h3>
-                        <p>
-                            Piumhi, Minas Gerais <br> Rua Aquela, Bairro Você Sabe <br> N° 123, Perto de nada
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
-                    <div class="content">
-                        <a href="#">
-                            <h1>Fried</h1>
-                        </a>
-                        <div class="items">
-                            <img src="/assets/icones/oleo.svg" alt="">
-                        </div>
-                        <h3>Óle de cozinha</h3>
-                        <p>
-                            Piumhi, Minas Gerais <br> Rua Aquela, Bairro Você Sabe <br> N° 123, Perto de nada
-                        </p>
-                    </div>
+                    <h3>Papel e Papelão</h3>
+                    <p>
+                        Piumhi, Minas Gerais
+                        <br>
+                        Rua Aquela, Bairro Você Sabe
+                        <br>
+                        N° 123, Perto de nada
+                    </p>
                 </div>
             </div>
-        </main>
-    </div>
 
-</body>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" alt="">
+                <div class="content">
+                    <a href="#">
+                        <h1>Repower</h1>
+                    </a>
+                    <div class="items">
+                        <img src="/assets/icones/baterias.svg" alt="">
+                        <img src="/assets/icones/eletronicos.svg" alt="">
+                    </div>
+                    <h3>Pilhas e Baterias, Residuos Eletrônicos</h3>
+                    <p>
+                        Piumhi, Minas Gerais
+                        <br>
+                        Rua Aquela, Bairro Você Sabe
+                        <br>
+                        N° 123, Perto de nada
+                    </p>
+                </div>
+            </div>
 
-</html>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+                <div class="content">
+                    <a href="#">
+                        <h1>Fried</h1>
+                    </a>
+                    <div class="items">
+                        <img src="/assets/icones/oleo.svg" alt="">
+                    </div>
+                    <h3>Óle de cozinha</h3>
+                    <p>
+                        Piumhi, Minas Gerais
+                        <br>
+                        Rua Aquela, Bairro Você Sabe
+                        <br>
+                        N° 123, Perto de nada
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
