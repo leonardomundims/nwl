@@ -1,5 +1,5 @@
 //dependencias usadas
-//express para o server
+//express para uar como servidor
 const express = require("express")
 const server = express()
 
@@ -15,6 +15,9 @@ nunjucks.configure("src/views", //pasta onde estão os arq. html
 
 // configurar pasta publica/public
 server.use(express.static("public"))
+
+// importar o objeto de acesso ao banco de dados
+const db = require("./database/db")
 
 
 //configurar as rotas do servidor
@@ -32,6 +35,7 @@ server.get("/create-point", (req, resp) => {
 
 //pagina search-results
 server.get("/search-results", (req, resp) => {
+
     return resp.render("search-results.html")
 })
 
