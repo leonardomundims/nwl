@@ -11,8 +11,9 @@ O objetivo do projeto é contruir uma aplicação que envolva os conceitos bási
 - Node Js com Xpress no back-end
 - Banco de dados SQLite
 
+_____
 #### Como utilizar essa projeto?
----
+
 É necessário ter o [Node Js](https://nodejs.org/en/download/ "Node Js") instalado em sua máquina.
 
 1. Após instalar o Node Js faça um clone do projeto
